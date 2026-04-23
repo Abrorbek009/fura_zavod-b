@@ -4,6 +4,7 @@ const transportSchema = new mongoose.Schema(
   {
     transport_date: { type: Date, default: Date.now },
     truck_number: { type: String, required: true, trim: true, uppercase: true },
+    product_name: { type: String, default: "", trim: true },
     gross_weight_kg: { type: Number, required: true, min: 0 },
     tare_weight_kg: { type: Number, required: true, min: 0 },
     cargo_weight_kg: { type: Number, default: 0, min: 0 },

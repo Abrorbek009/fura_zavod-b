@@ -43,6 +43,7 @@ function normalizePayload(body) {
   return {
     transport_date: body.transport_date ? new Date(body.transport_date) : new Date(),
     truck_number: String(body.truck_number || "").trim(),
+    product_name: String(body.product_name || "").trim(),
     gross_weight_kg: Number(body.gross_weight_kg),
     tare_weight_kg: Number(body.tare_weight_kg),
     cargo_weight_kg:
