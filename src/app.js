@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const transportRoutes = require("./routes/transportRoutes");
+const omborRoutes = require("./routes/omborRoutes");
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.get("/api/health", (req, res) => {
 });
 
 app.use("/api/transports", transportRoutes);
+app.use("/api/ombor", omborRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err);
